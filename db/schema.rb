@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140305115222) do
+ActiveRecord::Schema.define(version: 20140305115613) do
 
   create_table "boards", force: true do |t|
     t.string   "name"
@@ -27,10 +27,10 @@ ActiveRecord::Schema.define(version: 20140305115222) do
 
   create_table "posts", force: true do |t|
     t.boolean  "if_read",     default: false
-    t.string   "user_id"
+    t.integer  "user_id"
     t.string   "title"
     t.datetime "datetime"
-    t.string   "board_id"
+    t.integer  "board_id"
     t.text     "text"
     t.text     "reply"
     t.integer  "reply_count"
