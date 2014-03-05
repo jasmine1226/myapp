@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140305011056) do
+ActiveRecord::Schema.define(version: 20140305052336) do
 
   create_table "boards", force: true do |t|
     t.string   "name"
@@ -36,6 +36,23 @@ ActiveRecord::Schema.define(version: 20140305011056) do
     t.text     "reply"
     t.integer  "reply_count"
     t.string   "ip_adress"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "account"
+    t.string   "password"
+    t.string   "nickname"
+    t.string   "realname"
+    t.string   "mail_adress"
+    t.string   "adress"
+    t.date     "birthday"
+    t.datetime "registration"
+    t.datetime "last_visit"
+    t.string   "last_visit_ip"
+    t.integer  "visit_count"
+    t.integer  "post_count"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
