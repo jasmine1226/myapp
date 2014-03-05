@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140301142851) do
+ActiveRecord::Schema.define(version: 20140305011056) do
 
   create_table "boards", force: true do |t|
     t.string   "name"
@@ -21,6 +21,21 @@ ActiveRecord::Schema.define(version: 20140301142851) do
     t.boolean  "visable",           default: true
     t.boolean  "can_hate",          default: true
     t.boolean  "readonly",          default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", force: true do |t|
+    t.integer  "serial_no"
+    t.boolean  "if_read",     default: false
+    t.string   "user_id"
+    t.string   "title"
+    t.datetime "datetime"
+    t.string   "board_id"
+    t.text     "text"
+    t.text     "reply"
+    t.integer  "reply_count"
+    t.string   "ip_adress"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
