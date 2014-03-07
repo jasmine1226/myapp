@@ -1,4 +1,18 @@
 Myapp::Application.routes.draw do
+
+  root :to => "welcome#show"
+
+  get "/posts/newpost", :to => "posts#newpost", :as => :newpost
+  post "/posts", :to => "posts#create"
+  get "/posts/:id", :to => "posts#show", :as => :show
+
+  get "boards/index", :to => "boards#index", :as => :boardindex
+  get "boards/archive", :to => "boards#archive", :as => :archive
+
+  get "/users/index", :to => "users#index", :as => :userindex
+  post "/users", :to => "users#create"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
