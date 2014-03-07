@@ -1,0 +1,13 @@
+<h1>User List</h1>
+<%= params[:user] %>
+
+<b>Join us now!</b><br />
+<form action="/users" method="post">
+  Nickname: <input type="text" name="user[nickname]" /><br />
+  Account : <input type="text" name="user[account]" /><br />
+  Password: <input type="password" name="user[password]" /><br />
+  Email   : <input type="text" name="user[email]" /><br />
+  <input type="submit" value="Create!">
+  <input type="reset" value="Reset">
+</form>
+<a href="<%= root_path %>">Return</a>
