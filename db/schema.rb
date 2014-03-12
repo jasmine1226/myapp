@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140305115613) do
+ActiveRecord::Schema.define(version: 20140312124020) do
 
   create_table "boards", force: true do |t|
     t.string   "name"
@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 20140305115613) do
   end
 
   create_table "posts", force: true do |t|
-    t.boolean  "if_read",     default: false
     t.integer  "user_id"
     t.string   "title"
     t.datetime "datetime"
@@ -44,7 +43,7 @@ ActiveRecord::Schema.define(version: 20140305115613) do
     t.string   "password"
     t.string   "nickname"
     t.string   "realname"
-    t.string   "mail_adress"
+    t.string   "email"
     t.string   "adress"
     t.date     "birthday"
     t.datetime "last_visit"
