@@ -8,16 +8,18 @@ Myapp::Application.routes.draw do
   post "/posts", :to => "posts#create"
   get "/posts/:id", :to => "posts#show", :as => :post
   put "/posts/:id", :to => "posts#update"
-  delete "/posts/:id", :to => "posts#delete"
+  delete "/posts/:id", :to => "posts#destroy"
 
   get "boards/index", :to => "boards#index", :as => :boardindex
   get "boards/archive", :to => "boards#archive", :as => :archive
 
-  get "/users/index", :to => "users#index", :as => :userindex
-  post "/users", :to => "users#create", :as => :users
-
-  delete "/users", :to => "users#delete"
-
+  get "/users", :to => "users#index", :as => :users
+  get "/users/new", :to => "users#new", :as => :new_user
+  get "/users/:id/edit", :to => "users#edit", :as => :edit_user
+  post "/users", :to => "users#create"
+  get "/users/:id", :to => "users#show", :as => :user
+  put "/users/:id", :to => "users#update"
+  delete "/users/:id", :to => "users#destroy"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
