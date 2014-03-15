@@ -1,0 +1,12 @@
+<%= form_for @user, :method => :put, :url => user_path(@user) do |f| %>
+  
+Account: <%= f.text_field :account %> <br />
+Password: <%= f.password_field :password %> <br />
+Nickname: <%= f.text_field :nickname %> <br />
+Real Name: <%= f.text_field :realname %> <br />
+Email: <%= f.email_field :email %> <br />
+Birthday: <%= f.date_field :birthday %> <br />
+
+<%= f.submit %>
+
+<% end %>

@@ -1,0 +1,12 @@
+<%= link_to "Create New Account", new_user_path %> <br />
+
+User List
+<% @users.each do |user| %>
+  <div>
+    <%= user.account %>
+    <%= user.nickname %>
+    <%= link_to "View", user_path(user) %>
+    <%= link_to "Edit", edit_user_path(user) %>
+    <%= link_to "Delete", user_path(user), :method => :delete, :confirm => "Are you sure?" %>
+  </div>
+<% end %>

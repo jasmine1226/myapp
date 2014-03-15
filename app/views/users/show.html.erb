@@ -1,0 +1,6 @@
+Account: <%= @user.account %> <br />
+Nickname: <%= @user.nickname %> <br />
+Email: <%= @user.email %> <br />
+
+<%= link_to "Edit", edit_user_path(@user) %>
+<%= link_to "Return", users_path %>
